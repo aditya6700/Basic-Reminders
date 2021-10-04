@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="./todo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+          integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <h1>Digital Brain</h1>
+        <div class="controls">
+            <input type="text" class="task" placeholder="enter to remember" value="">
+            <!-- <button id="clear">Clear</button> -->
+            <!-- <button id="remember">Remember</button> -->
+            <i class="fas fa-minus" id="clear"></i>
+            <i class="fas fa-plus-circle" id="remember"></i>
+        </div>
+    </header>
+    
+    <main>
+        <div class="top">
+            <p id="todo">Don't forget these</p>
+            <button id="clearall">clear all</button>
+        </div>
+        
+        <div id="todo_list">
+       
+        </div>
+    </main>
+    
+    <script src="./todo.js"></script> 
+
+
+</body>
+</html>

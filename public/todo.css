@@ -1,0 +1,194 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(152, 91%, 91%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header{
+    flex-basis: 10rem;
+    margin: 3rem;
+    width: 100%;
+    max-width: 70%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1{
+    font-size: 4.2rem;
+    text-transform: capitalize;
+    letter-spacing: .4rem;
+    margin-bottom: 1rem;
+    color: #20bf6b;
+}
+
+header .controls{
+    width: 70%;
+    position: relative;
+}
+
+header .task{
+    padding: .5rem 1.2rem;
+    width: 100%;
+    font-size: 2.2rem;
+    outline: none;
+    border: double .3rem transparent;
+    border-radius: 2rem;
+    background: transparent;
+    background-image: linear-gradient(#fff, #fff), 
+                      linear-gradient(to right, #3ae374, #17c0eb);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    transition: all .2s linear;
+}
+.task:focus {
+    background-image: linear-gradient(#fff, #fff);
+    box-shadow: inset 0 0 0 2px #fff, 0px 0px 14px 1px #67e6dc
+}
+
+header .error{
+    background-image: linear-gradient(#fff, #fff), 
+                    linear-gradient(to right, #ff3838, #ff3838);
+}
+
+header #clear{
+    position: absolute;
+    top: 25%;
+    right: 4rem;
+    font-size: 2rem;
+    color: #ff3f34;
+}
+header #remember{
+    position: absolute;
+    top: 25%;
+    right: 1rem;
+    font-size: 2.2rem;
+    color: #0be881;
+}
+
+main{
+    margin: 3rem;
+    margin-top: 0rem;
+    width: 100%;
+    max-width: 70%;
+    padding: 1rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+main .top{
+    width: 100%;
+    display: flex;
+}
+
+main #todo{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: .8rem;
+    letter-spacing: .2rem;
+    color: #0a5df6;
+}
+
+main #clearall{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #000000;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+main #clearall:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+main #todo_list{
+    width: 100%;
+}
+
+main .todo_wrapper{
+    margin-bottom: .8rem;
+    padding: .8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .todo_title{
+   font-size: 2rem;
+   font-weight: 500;
+}
+
+main .todo_delete{
+   font-size: 1.5rem;
+   color: #ff3f34;
+}
+
+
+main .done p{
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+main .done i{
+    display: none;
+}
+
+main .clear{
+    display: none;
+}
+
+i:hover{
+    cursor: pointer;
+}
+
+@media(max-width: 768px){ 
+    header h1{
+        font-size: 3.2rem;
+    }
+    header .controls{
+        width: 80%;
+    }
+
+    header .task{ 
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    header #clear{
+        font-size: 1.8rem;
+    }
+
+    header #remember{
+        font-size: 2rem;
+    }
+
+    main #todo{
+        font-size: 1.8rem;
+    }
+
+    main #clearall{
+        font-size: 1.2rem;
+    }
+}
